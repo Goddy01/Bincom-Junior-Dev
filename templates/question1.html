@@ -29,16 +29,16 @@
           </tr>
         </thead>
         <tbody>
-            {% for polling_unit in polling_units %}
+            {% for announced_pu_result in announced_pu_results %}
           <tr>
             <th scope="row">{{ forloop.counter }}</th>
-            <td>{{ polling_unit.result_id }}</td>
-            <td> {{ polling_unit.polling_unit_uniqueid }} </td>
-            <td> {{ polling_unit.party_abbreviation }} </td>
-            <td> {{ polling_unit.party_score }} </td>
-            <td> {{ polling_unit.entered_by_user }} </td>
-            <td> {{ polling_unit.date_entered }} </td>
-            <td> {{ polling_unit.user_ip_address }} </td>
+            <td>{{ announced_pu_result.result_id }}</td>
+            <td> {{ announced_pu_result.polling_unit_uniqueid }} </td>
+            <td> {{ announced_pu_result.party_abbreviation }} </td>
+            <td> {{ announced_pu_result.party_score }} </td>
+            <td> {{ announced_pu_result.entered_by_user }} </td>
+            <td> {{ announced_pu_result.date_entered }} </td>
+            <td> {{ announced_pu_result.user_ip_address }} </td>
           </tr>
           <!-- <tr>
             <th scope="row">2</th>
