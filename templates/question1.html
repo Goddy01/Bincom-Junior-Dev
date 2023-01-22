@@ -17,6 +17,7 @@
 <body class="m-5">
     <table class="table">
         <thead>
+            <h2 class="text-center">{{ polling_unit_details.polling_unit_name|title }}</h2>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Result Id</th>
@@ -27,6 +28,7 @@
             <th scope="col">Date Entered</th>
             <th scope="col">User Ip Address</th>
           </tr>
+          
         </thead>
         <tbody>
             {% for announced_pu_result in announced_pu_results %}

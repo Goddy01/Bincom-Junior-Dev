@@ -538,7 +538,6 @@ CREATE TABLE IF NOT EXISTS `lga` (
 -- Dumping data for table `lga`
 --
 SET SQL_MODE='ALLOW_INVALID_DATES';
-
 INSERT INTO `lga` (`uniqueid`, `lga_id`, `lga_name`, `state_id`, `lga_description`, `entered_by_user`, `date_entered`, `user_ip_address`) VALUES
 (1, 1, 'Aniocha North', 25, 'Aniocha North', 'Bincom', '0000-00-00 00:00:00', '127.0.0.2'),
 (2, 2, 'Aniocha - South', 25, 'Aniocha - South', 'Bincom', '0000-00-00 00:00:00', '127.0.0.1'),
