@@ -18,5 +18,5 @@ from django.urls import path
 from election import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.ye, name='ye'),
+    path('question1', views.question1, name='agents')
 ]

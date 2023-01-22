@@ -1,1 +1,59 @@
-<h1>BRO</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <title>Document</title>
+</head>
+<body class="m-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Result Id</th>
+            <th scope="col">Polling Unit Unique Id</th>
+            <th scope="col">Party Abbrev</th>
+            <th scope="col">Party Score</th>
+            <th scope="col">Entered By</th>
+            <th scope="col">Date Entered</th>
+            <th scope="col">User Ip Address</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for polling_unit in polling_units %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ polling_unit.result_id }}</td>
+            <td> {{ polling_unit.polling_unit_uniqueid }} </td>
+            <td> {{ polling_unit.party_abbreviation }} </td>
+            <td> {{ polling_unit.party_score }} </td>
+            <td> {{ polling_unit.entered_by_user }} </td>
+            <td> {{ polling_unit.date_entered }} </td>
+            <td> {{ polling_unit.user_ip_address }} </td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+          {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>

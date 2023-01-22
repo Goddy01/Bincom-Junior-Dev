@@ -1,17 +1,8 @@
 from django.shortcuts import render
 from django.db import connection
-# from bincom
+from election.models import AnnouncedPuResults
 
 # Create your views here.
-
-# print('RE: ', polling_unit.objects.using('other').all())
-def ye(request, filename):
-    # def get_rows(filename):
-    with open(filename, 'r') as f:
-        sql = f.read()
-
-    with connection.cursor() as cursor:
-        cursor.execute(sql)
-        rows = cursor.fetchall()
-    return row
-    return render(request, 'question1.html')
+def question1(request):
+    polling_units = AnnouncedPuResults.objects.all()
+    return render(request, 'question1.html', {'polling_units': polling_units})

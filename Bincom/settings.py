@@ -79,10 +79,10 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql2models',
+        'NAME': 'bincom',
         'USER': 'root',
-        'HOST': 'localhost',
-        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PASSWORD': 'Toluwashe2002@_',
         'PORT': '3306',
     },
     # 'bincom_db': {
